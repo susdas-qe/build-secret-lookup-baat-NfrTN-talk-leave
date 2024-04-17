@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: component-two-mqyx
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: component-two-mqyx
+    app.kubernetes.io/part-of: build-secret-lookup-baat
+  name: component-two-mqyx
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: component-two-mqyx
+status:
+  loadBalancer: {}
